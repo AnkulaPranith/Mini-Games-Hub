@@ -1,0 +1,189 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Rock Paper Scissors - Mini Games Hub</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+
+            <a class="navbar-brand fw-bold" href="../index.html">
+                🎮 Mini Games Hub
+            </a>
+
+            <button class="navbar-toggler" type="button"
+                data-bs-toggle="collapse" data-bs-target="#navbarMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarMenu">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../register.html">Register</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="../index.html#games">Games</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../about.html">About</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Game Section -->
+    <section class="game-page">
+        <div class="container">
+
+            <div class="game-panel">
+
+                <div class="text-center">
+                    <div class="large-game-icon">✊</div>
+                    <h1>Rock Paper Scissors</h1>
+                    <p>Choose your move and challenge the computer!</p>
+                </div>
+
+                <!-- Rules -->
+                <div class="rules-box">
+
+                    <button class="rules-btn" id="rulesButton">
+                        Show Game Rules
+                    </button>
+
+                    <div class="rules-content" id="rulesContent" hidden>
+                        <ul>
+                            <li>Rock beats Scissors.</li>
+                            <li>Scissors beats Paper.</li>
+                            <li>Paper beats Rock.</li>
+                            <li>Same choices result in a draw.</li>
+                            <li>First to score 5 points wins the match.</li>
+                        </ul>
+                    </div>
+
+                </div>
+
+                <!-- Score Board -->
+                <div class="score-board">
+
+                    <div class="score-item">
+                        <h4>You</h4>
+                        <h2 id="playerScore">0</h2>
+                    </div>
+
+                    <div class="score-divider">VS</div>
+
+                    <div class="score-item">
+                        <h4>Computer</h4>
+                        <h2 id="computerScore">0</h2>
+                    </div>
+
+                </div>
+
+                <p class="text-center score-instruction">
+                    First to 5 points wins!
+                </p>
+
+                <!-- Choices -->
+               
+<!-- Player and Computer Choices Display -->
+
+<div class="pick-display">
+
+    <div class="pick-box">
+        <h4>Your Pick</h4>
+        <div id="playerPick">❔</div>
+        <p id="playerPickName">Not Selected</p>
+    </div>
+
+    <div class="pick-vs">VS</div>
+
+    <div class="pick-box">
+        <h4>Computer Pick</h4>
+        <div id="computerPick">❔</div>
+        <p id="computerPickName">Waiting...</p>
+    </div>
+
+</div>
+
+<!-- Choices -->
+
+<h4 class="text-center choice-heading">Choose Your Move</h4>
+
+<div class="choice-buttons">
+
+    <button class="choice-btn" data-choice="Rock">
+        ✊
+        <span>Rock</span>
+    </button>
+
+    <button class="choice-btn" data-choice="Paper">
+        ✋
+        <span>Paper</span>
+    </button>
+
+    <button class="choice-btn" data-choice="Scissors">
+        ✌️
+        <span>Scissors</span>
+    </button>
+
+</div>
+
+<!-- Round Result -->
+
+<div class="round-result" id="roundResult">
+    Make your first move!
+</div>
+
+<!-- Match History -->
+
+<div class="history-box">
+
+    <h4>Match History</h4>
+
+    <ul id="matchHistory">
+        <li>No completed matches yet.</li>
+    </ul>
+
+</div>
+                <!-- Restart -->
+                <button class="btn restart-btn w-100 mt-4"
+                    id="restartButton" disabled>
+                    Restart Match
+                </button>
+
+                <div class="text-center mt-4">
+                    <a href="../index.html#games" class="back-link">
+                        ← Back to Games
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container text-center">
+            <h5>🎮 Mini Games Hub</h5>
+            <p>© 2026 Mini Games Hub. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../js/rock-paper-scissors.js"></script>
+
+</body>
+</html>
